@@ -1,0 +1,9 @@
+MCP server cung cấp 4 tool để xử lý và phân tích chuỗi văn bản
+
+1. echo_text: Trả lại chính chuỗi văn bản bạn gửi vào.
+
+2. reverse_text: Đảo ngược chuỗi văn bản.
+
+3. count_words: Đếm số từ trong chuỗi văn bản.
+
+4. uppercase_text: Viết hoa toàn bộ chuỗi văn bản.

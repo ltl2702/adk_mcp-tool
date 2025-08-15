@@ -1,0 +1,10 @@
+MCP server cung cấp 2 tool lấy thông tin thời tiết từ National Weather Service API tại Hoa Kỳ
+
+Tools:
+1. get_alerts: lấy cảnh báo thời tiết đang hoạt động cho 1 bang của Mỹ
+2. get_forecast: lấy dự báo thời tiết cho 1 vị trí cụ thể
+
+Example:
+Thời tiết ở Sacramento hiện tại như thế nào?
+Các cảnh báo thời tiết hoạt động ở Texas?
+Thời tiết ở Canifornia? 
