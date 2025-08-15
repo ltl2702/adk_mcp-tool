@@ -1,0 +1,32 @@
+MCP server này cung cấp nhiều tool để truy vấn và phân tích dữ liệu tài chính, bao gồm cổ phiếu, crypto, báo cáo tài chính.
+
+Tools:
+
+- get_income_statements: Lấy báo cáo kết quả kinh doanh của một công ty. Tham số: ticker, period (annual, quarterly, ttm), limit
+
+- get_balance_sheets: Lấy bảng cân đối kế toán của một công ty. Tham số tương tự get_income_statements
+
+- get_cash_flow_statements: Lấy báo cáo dòng tiền của một công ty. Tham số tương tự get_income_statements
+
+- get_current_stock_price: Lấy giá cổ phiếu hiện tại của một công ty. Tham số: ticker
+
+- get_historical_stock_prices: Lấy giá cổ phiếu lịch sử. Tham số: ticker, start_date, end_date, interval, interval_multiplier
+
+- get_company_news: Lấy tin tức liên quan đến công ty. Tham số: ticker
+
+- get_available_crypto_tickers: Lấy danh sách các crypto có sẵn
+
+- get_crypto_prices: Lấy giá crypto hiện tại hoặc lịch sử. Tham số: ticker, start_date, end_date, interval, interval_multiplier
+
+- get_current_crypto_price: Lấy giá crypto hiện tại. Tham số: ticker
+
+- get_historical_crypto_prices: Lấy giá crypto lịch sử. Tham số: ticker, start_date, end_date, interval, interval_multiplier
+
+- get_sec_filings: Lấy hồ sơ SEC của một công ty. Tham số: ticker, limit, filing_type
+
+Ví dụ:
+- Lấy báo cáo kết quả kinh doanh của Apple 4 năm gần nhất
+
+- Lấy giá cổ phiếu Tesla hiện tại
+
+- Lấy 4 tin tức Google gần nhất
