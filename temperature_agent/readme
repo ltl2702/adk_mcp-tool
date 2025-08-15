@@ -1,0 +1,3 @@
+MCP server cung cấp tool chuyển đổi nhiệt độ từ Celsius sang Fahrenheit.
+Ban đầu trong file mcp-server.py, dùng mcp.server.stdio và FunctionTool giống mẫu trên web của adk bị timeout và có lỗi TaskGroup error khi trả lời yêu cầu.
+Sau khi dùng FastMCP thì agent kết nối nhanh, async ổn định hơn không bị timeout 5s.
