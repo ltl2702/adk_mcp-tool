@@ -1,14 +1,16 @@
 # ./adk_agent_samples/mcp_agent/agent.py
 import os # Required for path operations
-from google.adk.agents import LlmAgent
-from google.adk.tools.mcp_tool.mcp_toolset import MCPToolset, StdioConnectionParams, StdioServerParameters
+from google.adk.agents.llm_agent import LlmAgent
+from google.adk.tools.mcp_tool import StdioConnectionParams
+from google.adk.tools.mcp_tool.mcp_toolset import MCPToolset
+from mcp import StdioServerParameters
 
 # It's good practice to define paths dynamically if possible,
 # or ensure the user understands the need for an ABSOLUTE path.
 # For this example, we'll construct a path relative to this file,
 # assuming '/path/to/your/folder' is in the same directory as agent.py.
 # REPLACE THIS with an actual absolute path if needed for your setup.
-TARGET_FOLDER_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "C:/Users/PC/Downloads/test/mcp_agent")
+TARGET_FOLDER_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "C:/Users/PC/Downloads/test/mcp_agent_example")
 # Ensure TARGET_FOLDER_PATH is an absolute path for the MCP server.
 # If you created ./adk_agent_samples/mcp_agent/your_folder,
 
