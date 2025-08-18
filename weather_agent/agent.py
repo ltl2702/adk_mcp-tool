@@ -21,10 +21,25 @@ root_agent = LlmAgent(
     model="gemini-2.0-flash",
     name="echo_agent",
     instruction = """
-    "You have access to 2 tools:\n"
-    - 'get_alerts': Retrieve weather alerts from MCP server.
-    - 'get_forecast': Retrieve weather forecast from MCP server.
-    Use these tools to help the user with text processing or weather information as requested.
-    """,
+        You have access to 2 tools:
+        - 'get_alerts': Retrieve weather alerts from MCP server.
+        - 'get_forecast': Retrieve weather forecast from MCP server.
+
+        Instruction for the agent:
+
+        1. When the user mentions a city or state name:
+        - Convert the city/state name into the correct US state code and latitude/longitude.
+        - If the input is a country name, assume they mean a location within the US and choose the appropriate state.
+        - You may use an internal mapping or geocoding API to resolve names to coordinates/state codes.
+
+        2. When the user asks for weather forecast:
+        - Call 'get_forecast(latitude, longitude)' using the resolved coordinates.
+
+        3. When the user asks for active weather alerts:
+        - Call 'get_alerts(state_code)' using the resolved US state code.
+
+        4. Always respond with human-readable weather or alert information returned by the tools.
+        """,
+
     tools=[simple_mcp_tools]
 )  
